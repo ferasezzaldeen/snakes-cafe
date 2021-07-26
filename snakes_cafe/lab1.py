@@ -33,13 +33,13 @@ for i in menu:
         print(x)
     print('')
 orders=[]
-
-
-while True:
-    order=input("""***********************************
+print("""***********************************
 ** What would you like to order? **
 ***********************************
     """)
+
+while True:
+    order=input('> ')
     order=order.capitalize()
     if order=='Quit':
         break
@@ -48,8 +48,10 @@ while True:
         c=Counter(orders)
         if c[order]==1:
              print(f"** {c[order]} order of {order} added to your meal **")
+             print('')
         else:
             print(f"** {c[order]} orders of {order} added to your meal **")
+            print('')
 
  
 
